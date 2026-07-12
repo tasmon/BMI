@@ -4,7 +4,14 @@ body {
   background: #f5f5f5;
   width: 240px;
   height: 320px;
-  overflow: hidden;
+  overflow: hidden; /* keep body fixed */
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  overflow-y: auto; /* enable vertical scroll */
 }
 
 header {
@@ -15,7 +22,7 @@ header {
 }
 
 header h2 {
-  font-size: 16px; /* smaller title */
+  font-size: 16px;
   margin: 0;
 }
 
@@ -59,9 +66,6 @@ button.primary:hover {
 }
 
 .bottom-nav {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
   background: #3700b3;
   text-align: center;
 }
